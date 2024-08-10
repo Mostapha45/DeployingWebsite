@@ -1,0 +1,361 @@
+/************* your name: Mostapha Alahmair
+
+INSTRUCTIONS:
+Comments starting with TO-DO have been included in this file to describe the needed styling: please translate these to the appropriate CSS declarations. 
+
+Comments starting with TO-DO may be left in for reference or removed entirely: all other comments should be left as-is for ease of review.
+
+You are discouraged from changing any provided CSS.
+
+***** colour palette: *****
+- mustard yellow (used for header, footer, and buttons): #E5AF42
+- cornflower blue (used for hover states): #4278e5
+
+*/
+
+
+/************* site defaults *************/
+body {
+    width: 950px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+ 
+    
+
+
+/* TO DO: all elements with the .flex class applied are to be made into flex-box containers. */
+
+/*setting all elements that will have the flex class to distribute space evenly between items, centre all items and app space betwee*/
+.flex {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;   
+}
+
+
+/************* site-wide text styling *************/
+
+/* TO DO:
+    - first-level headings are size 48px, centered vertically and horizontally in the available space.
+    - 2nd-level headings have a font size of 36px, and 12px of space below.
+    - any element with the .large-text class has a font size of 24px.
+    - any element with the .fake-button class will have a background colour of mustard yellow (see colour palette above), be center aligned, with a line-height of 3 and a solid black border that is 1px wide.
+    - all anchors will have the underline removed and be black in colour. all anchors in the main and footer sections will be underlined in their hover-state.
+    - the hover-state of .fake-button and .blue-hover elements will:
+        - add an underline, 
+        - set the background-colour to cornflower blue (see colour palette above),
+        - change the text colour to white, and 
+        - change the cursor to pointer.
+*/
+
+
+/************* site-wide text styling *************/
+
+/* h1 headings are set to 48px and centered in the avaliable space */
+h1 {
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+/* h2 headings have a size of 36px and 12 px of space below */
+h2 {
+    font-size: 36px;
+    margin-bottom: 12px; 
+}
+
+/* styling for the large text class to have a size of 24px */
+.large-text {
+    font-size: 24px;
+}
+
+/* styling for fake button class to have a background of yellow, be centered with the required line height and border  */
+.fake-button {
+    background-color: #E5AF42; 
+    text-align: center;
+    line-height: 3;
+    border: 1px solid black;
+    display: inline-block;
+    padding: 0 10px; 
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* setting the links in the footer to underline when hovered above */
+main a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+/* setting the buttons to turn blue when hovered above */
+.fake-button:hover, .blue-hover:hover {
+    text-decoration: underline;
+    background-color: #4278e5; 
+    color: white;
+    cursor: pointer;
+}
+
+
+/************* header/footer styling *************/
+
+/* TO DO:
+    - the header and footer will be the same mustard-yellow as the buttons.
+    - the header is 150px tall.
+    - the header image is 100px wide and tall with 25px of space above, below, and on its left, and the top-level heading is centered in the remaining width.
+    - there will be 25px of space between the header and main, and 50px of space between main and footer.
+    - the footer will be 60px tall with 26px of space around the contents, have a font-weight of 200, and the text within will be centered vertically and horizontally.
+*/
+
+/************* header/footer styling *************/
+
+/* styling the header and ensuring it is yellow, adding the height of 150px adding space between the header and the main*/
+header {
+    background-color: #E5AF42; 
+    height: 150px;
+    display: flex;
+    align-items: center; 
+    padding: 0 25px; 
+    margin-bottom: 25px; 
+}
+
+/* setting the image in the headers width to 100px and height of 100px and then adding the space above below and on the left */
+header img {
+    width: 100px;
+    height: 100px;
+    margin: 25px 25px 25px 0; 
+}
+
+/* h1 heading in the header styling centering it and settting the flex grow increment*/
+header h1 {
+    flex-grow: 1; 
+    text-align: center; 
+}
+
+/* setinng the space between the main and the footer*/
+main {
+    margin-bottom: 50px; 
+}
+
+/* Styling the food and ensuring it is yellow as well as 60px tall and 26px of space around the contents, also setting the weight to 200 and centering the text vertically and horizontially.*/
+footer {
+    background-color: #E5AF42; 
+    height: 60px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 26px; 
+    font-weight: 200; 
+}
+
+
+/************* index page *************/
+
+/* TO-DO: 
+    - this is a 2-column layout: text on the left, and an image on the right. The image will be 300px wide, with 25px between it and the text column, which takes up the remaining space. The image will also have 50px of space below.
+    - the h2 on this page will have a line-height equal to the font size.
+    - each paragraph on this page will have 12px of space beneath it.
+    - each fake-button on this page will be 250px wide with 150px of space between them.
+    - the pair of fake-buttons will be centered on the page. HINT: can calculate the required margin to make them appear to be centered.
+*/
+
+/************* index page *************/
+
+/* setting the page to display the text on left and then image on the right as well as alligning the items to the top*/
+.index .flex {
+    display: flex;
+    align-items: flex-start; 
+}
+
+/* styling the text column to take up the remaning space to ensure a nice fit and then adding a 25px gap between the text and the image  */
+.index .about-us {
+    flex-grow: 1; 
+    margin-right: 25px; 
+}
+
+/* setting the image width to 300px and adding 50px of space below the image  */
+.index img {
+    width: 300px;
+    margin-bottom: 50px; 
+}
+
+/* setting second level heading to have the sane lineheight as the font size */
+.index h2 {
+    line-height: 1; 
+}
+
+/* setting the spacing of 12 px between each paragraph */
+.index p {
+    margin-bottom: 12px; 
+}
+
+/* Setting the width of the fake-buttons to 250px and then adding 150px of space between them since there is two buttons we add 75px on each side*/
+.index .fake-button {
+    width: 250px; 
+    margin: 0 75px; 
+}
+
+/* by selecting the flex container all child elements will be centered horizontially within their parents container and centered on the page*/
+.index .flex:nth-of-type(2) {
+    justify-content: center; 
+}
+
+
+/************* bookings page *************/
+
+/* TO-DO:
+    - the contents of the booking-page will be 600px wide, and all content centered within the available space.
+    - text will have a size of 18px.
+    - there will be 12px of space below the day-selectors, and 20px of space between each list item. List items are 60px wide.
+    - List items & the small-button elements will have a solid black border that is 1px wide. Small-buttons will also have 5px of space between the border and the content.
+    - items tagged with .top-margin will have 24 px of space above, and 12px of space below.
+    - the "clear days" button will be 200px wide.
+    - any element tagged with the .clicked class will turn mustard yellow. **This will be very important for your JavaScript.**
+    - all items within the page will be centered within their available space.
+*/
+
+/************* bookings page *************/
+
+/* Booking page styling which centres all the content in the space, ensure all text and elements are centred we also add padding at the bottom of the page to raise the clear days button*/
+.booking-page {
+    width: 600px;
+    margin: 0 auto; 
+    text-align: center; 
+    padding-bottom: 50px; 
+}
+
+/* General text styling to make sure all text has the size of 18px*/
+.booking-page p, .booking-page li, .booking-page label {
+    font-size: 18px; 
+}
+
+/* The days of the week and list items are being style here, there are 60px wide, there is 20px of space between each one and there is 12px of space bellow them they are also enclosed in solid black borders */
+.booking-page li {
+    width: 60px; 
+    margin-bottom: 12px; 
+    margin-right: 20px;
+    border: 1px solid black; 
+}
+
+
+/* Small buttons styling which includes setting a black border of 1px, allowing for 5px of space between the border and the text, we then also change the cursor to a pointer in order to let the user see interactivity */
+.booking-page .small-button {
+    border: 1px solid black; 
+    padding: 5px; 
+    display: inline-block; 
+    cursor: pointer; 
+}
+
+/* Top margin items styling which includes having 24px of space above and 12 below. */
+.booking-page .top-margin {
+    margin-top: 24px; 
+    margin-bottom: 12px; 
+}
+
+/* Clear days button which is set to 200px width, we also set the border for the button and background*/
+.booking-page .clear-days-button {
+    width: 200px; 
+    background-color: #E5AF42; 
+    border: 1px solid black; 
+    cursor: pointer; 
+}
+
+/* Clicked class which is used with our javascript to change the background colour to yellow anytime an element is tagged with clicked*/
+.booking-page .clicked {
+    background-color: #E5AF42;
+}
+
+/* Centering all items within their container */
+.booking-page * {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/************* contact page *************/
+/* TO DO:
+    - the main section of the .contact page will be 420px tall, and centered.
+    - the contents will be 2 columns: the labels column is 150px wide and right-aligned, and the input column is 300px wide. There will be 24px of space between the columns, and the pair of columns will be centered on the page.
+    - the textarea element will be 150px tall.
+    - all form input, textarea, and and button elements will have the same font as the rest of the page, a line-height of 24px, a font-size of 16px, and the same border as other buttons on the site. There will be 24px of space below each of these elements.
+    - the edges of the button will line up exactly with the text-area element. HINT: time for some math!
+*/
+
+/************* contact page *************/
+
+/* Ensuring the main section of the page is 420px tall and centred  */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 420px;
+}
+
+/* Setting the information of the page to be displayed as requested by centring the information and setting the width to fit the entire screen */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto;
+}
+
+/* Ensuring the columns will be centred on the page and adding a space of 24px to the bottom */
+.contact .flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; 
+    margin-bottom: 24px;
+}
+
+/* Setting the labels column to be 150px wide and alligned to the right, also setting 24px of space between the label and the input boxes */
+.contact label {
+    width: 150px; 
+    text-align: right; 
+    margin-right: 24px; 
+    display: block;
+}
+
+/* Since input and text area will have the same font,fontsize, border, and space below we style them all together  */
+.contact input,
+.contact textarea {
+    width: 300px; 
+    line-height: 24px;
+    font-size: 16px;
+    border: 1px solid black; 
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* Styling the textare element to be 150px tall*/
+.contact textarea {
+    height: 150px; 
+}
+
+/* Setting the good dog button to be the same widht as the inputs, as well as the line height to 24 px as well as setting the margin-left to 174px in order to get a correct display on the button */
+.contact button {
+    width: 300px; 
+    line-height: 24px;
+    border: 1px solid black; 
+    background-color: #E5AF42; 
+    cursor: pointer;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-left: 174px; 
+}
+
+/*Setting the styling for the good dog button to change colours when hovered above */
+.contact button:hover {
+    background-color: #4278e5; 
+    color: white; 
+}
